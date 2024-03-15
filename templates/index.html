@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0cddec;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>System Information</h1>
+        <p><span class="highlight">CPU Load:</span> {{ cpu_load }}%</p>
+        <p><span class="highlight">Memory Load:</span> {{ mem_load }}%</p>
+        <p><span class="highlight">Storage Used:</span> {{ storage_used_gb }} GB</p>
+        <p><span class="highlight">Uptime:</span> {{ uptime_str }}</p>
+        <p><span class="highlight">CPU Temperature:</span> {{ cpu_temp_celsius }}°C</p> 
+        <p><span class="highlight">Operating System:</span> {{ os_system }} {{ os_release }}</p>
+        <H>{{ status_message }}</H>
+    </div>
+</body>
+</html>
